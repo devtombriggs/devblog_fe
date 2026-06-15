@@ -1,0 +1,56 @@
+import { Terminal } from "lucide-react"
+
+const NavBar = () => {
+    return (
+        <nav className="border-b border-slate-800 bg-slate-950">
+            <div className="mx-auto flex h-16 max-w-7x1 items-center justify-between px-6">
+                <div className="flex items-center gap-2">
+                    <Terminal size={24} className="text-blue-500" />
+                    <span className="text-xl font-bold text-white">
+                        DevOps with Tom
+                    </span>
+                </div>       
+                            <ul className="flex items-center gap-8 text-sm font-medium text-slate-300">
+                <li>
+                    <a href="#about" className="hover:text-blue-400">
+                    About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#what-i-do" className="hover:text-blue-400">
+                    Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#certs" className="hover:text-blue-400">
+                    Certifications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects" className="hover:text-blue-400">
+                    Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/blog" className="hover:text-blue-400">
+                    Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/contact" className="hover:text-blue-400">
+                        Contact Me
+                    </a>
+                </li>
+            </ul>      
+            </div>
+
+        </nav>
+    )
+}
+
+export default NavBar;
