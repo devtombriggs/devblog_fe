@@ -3,9 +3,11 @@ import { Terminal } from "lucide-react"
 const NavBar = () => {
     return (
         <nav className="border-b border-slate-800 bg-slate-950">
-            <div className="mx-auto flex h-16 max-w-7x1 items-center justify-between px-6">
+            <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-10">
                 <div className="flex items-center gap-2">
-                    <Terminal size={24} className="text-blue-500" />
+                    <div className="border border-blue-500 rounded p-1">
+                        <Terminal size={20} className="text-blue-500" />
+                    </div>
                     <span className="text-xl font-bold text-white">
                         DevOps with Tom
                     </span>
