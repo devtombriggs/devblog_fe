@@ -1,11 +1,18 @@
-import { Terminal, Github, Linkedin, Twitter, Youtube, Mail } from "lucide-react"
+import { Terminal } from "lucide-react"
+
+const DummyIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"/>
+        <circle cx="4" cy="4" r="2"/>
+    </svg>
+)
 
 const socials = [
-    { icon: Github, label: "GitHub", href: "https://github.com" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Twitter, label: "Twitter / X", href: "https://twitter.com" },
-    { icon: Youtube, label: "YouTube", href: "https://youtube.com" },
-    { icon: Mail, label: "Email", href: "mailto:placeholder@example.com" },
+    { label: "GitHub", href: "https://github.com" },
+    { label: "LinkedIn", href: "https://linkedin.com" },
+    { label: "Twitter / X", href: "https://twitter.com" },
+    { label: "YouTube", href: "https://youtube.com" },
+    { label: "Email", href: "mailto:placeholder@example.com" },
 ]
 
 const navLinks = [
@@ -40,14 +47,14 @@ const Footer = () => {
                     </ul>
 
                     <div className="flex items-center gap-5">
-                        {socials.map(({ icon: Icon, label, href }) => (
+                        {socials.map(({ label, href }) => (
                             <a
                                 key={label}
                                 href={href}
                                 aria-label={label}
                                 className="text-slate-400 hover:text-blue-400 transition-colors"
                             >
-                                <Icon size={20} />
+                                <DummyIcon />
                             </a>
                         ))}
                     </div>

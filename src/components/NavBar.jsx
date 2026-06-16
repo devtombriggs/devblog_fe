@@ -8,8 +8,9 @@ const NavBar = () => {
                     <div className="border border-blue-500 rounded p-1">
                         <Terminal size={20} className="text-blue-500" />
                     </div>
-                    <span className="text-xl font-bold text-white">
-                        DevOps with Tom
+                    <span className="text-xl font-bold">
+                        <span className="text-white">DevOps </span>
+                        <span className="text-slate-400">with Tom</span>
                     </span>
                 </div>       
                             <ul className="flex items-center gap-8 text-sm font-medium text-slate-300">
