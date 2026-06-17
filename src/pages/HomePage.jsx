@@ -92,11 +92,11 @@ const projects = [
 function HomePage() {
     return (
         <div>
-            {/* Hero — dark section */}
-            <section className="bg-slate-950 py-24">
-                <div className="mx-auto max-w-7xl px-10 flex items-center justify-between gap-12">
-                    <div className="flex flex-col gap-6 max-w-xl">
-                        <h1 className="text-4xl font-bold text-white leading-tight">
+            {/* Hero */}
+            <section className="bg-slate-950 py-12 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-10">
+                    <div className="flex flex-col gap-6 w-full md:max-w-xl text-center md:text-left">
+                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
                             Automate. Deploy. Monitor. Repeat.
                         </h1>
                         <p className="text-slate-300">
@@ -105,7 +105,7 @@ function HomePage() {
                         <p className="text-slate-300">
                             Sharing practical knowledge and real-world experiences from the trenches.
                         </p>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 justify-center md:justify-start flex-wrap">
                             <a
                                 href="/blog"
                                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded transition-colors"
@@ -120,22 +120,22 @@ function HomePage() {
                             </a>
                         </div>
                     </div>
-                    <div className="flex-shrink-0">
-                        <img src={homelogo} alt="DevOps illustration" className="w-96 h-auto" />
+                    <div className="flex-shrink-0 hidden md:block">
+                        <img src={homelogo} alt="DevOps illustration" className="w-72 lg:w-96 h-auto" />
                     </div>
                 </div>
             </section>
 
             {/* Tech logos strip */}
-            <section className="bg-slate-50 py-10">
-                <div className="mx-auto max-w-7xl px-10">
-                    <div className="flex items-center justify-center flex-wrap gap-10">
+            <section className="bg-slate-50 py-8 lg:py-10">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <div className="flex items-center justify-center flex-wrap gap-6 lg:gap-10">
                         {techLogos.map(({ src, alt }) => (
                             <img
                                 key={alt}
                                 src={src}
                                 alt={alt}
-                                className="h-10 w-auto grayscale hover:grayscale-0 transition-all"
+                                className="h-8 lg:h-10 w-auto grayscale hover:grayscale-0 transition-all"
                             />
                         ))}
                     </div>
@@ -143,19 +143,19 @@ function HomePage() {
             </section>
 
             {/* About me */}
-            <section id="about" className="bg-white py-24">
-                <div className="mx-auto max-w-7xl px-10">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-10">About Me</h2>
-                    <div className="flex items-center gap-16">
+            <section id="about" className="bg-white py-12 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-8 lg:mb-10">About Me</h2>
+                    <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
                         <div className="flex-shrink-0">
                             <img
                                 src={mePic}
                                 alt="Tom"
-                                className="w-72 h-72 object-cover rounded-2xl shadow-md"
+                                className="w-52 h-52 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover rounded-2xl shadow-md"
                             />
                         </div>
-                        <div className="flex flex-col gap-5 max-w-lg">
-                            <h3 className="text-xl font-semibold text-slate-700">Hi, I'm Tom</h3>
+                        <div className="flex flex-col gap-5 max-w-lg text-center md:text-left">
+                            <h3 className="text-lg lg:text-xl font-semibold text-slate-700">Hi, I'm Tom</h3>
                             <p className="text-slate-600 leading-relaxed">
                                 I'm a DevOps Engineer focused on automation, infrastructure as code, CI/CD, and observability.
                                 I enjoy building tools that make deployments easier and systems more reliable.
@@ -165,7 +165,7 @@ function HomePage() {
                             </p>
                             <a
                                 href="#"
-                                className="self-start bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded transition-colors"
+                                className="self-center md:self-start bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded transition-colors"
                             >
                                 Learn more about me
                             </a>
@@ -175,19 +175,19 @@ function HomePage() {
             </section>
 
             {/* What I do */}
-            <section id="what-i-do" className="bg-slate-50 py-24">
-                <div className="mx-auto max-w-7xl px-10">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-12">What I Do</h2>
-                    <div className="grid grid-cols-4 gap-6">
+            <section id="what-i-do" className="bg-slate-50 py-12 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-8 lg:mb-12">What I Do</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {whatIDo.map(({ icon: Icon, title, description }) => (
                             <div
                                 key={title}
-                                className="bg-white border border-slate-200 rounded-xl p-8 flex flex-col gap-4 shadow-sm"
+                                className="bg-white border border-slate-200 rounded-xl p-6 lg:p-8 flex flex-col gap-4 shadow-sm"
                             >
                                 <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
                                     <Icon size={24} className="text-blue-600" />
                                 </div>
-                                <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+                                <h3 className="text-base lg:text-lg font-semibold text-slate-900">{title}</h3>
                                 <p className="text-slate-500 text-sm leading-relaxed">{description}</p>
                             </div>
                         ))}
@@ -196,20 +196,20 @@ function HomePage() {
             </section>
 
             {/* Certifications */}
-            <section id="certs" className="bg-white py-24">
-                <div className="mx-auto max-w-7xl px-10">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-12">Certifications</h2>
-                    <div className="grid grid-cols-2 gap-6">
+            <section id="certs" className="bg-white py-12 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-8 lg:mb-12">Certifications</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {certs.map(({ badge, title, issuer, date }) => (
                             <div
                                 key={title}
-                                className="flex items-center gap-6 border border-slate-200 rounded-xl p-6 shadow-sm"
+                                className="flex items-center gap-5 border border-slate-200 rounded-xl p-5 shadow-sm"
                             >
-                                <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                                     <span className="text-white font-bold text-sm">{badge}</span>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h3 className="text-base font-semibold text-slate-900">{title}</h3>
+                                    <h3 className="text-sm lg:text-base font-semibold text-slate-900">{title}</h3>
                                     <p className="text-sm text-slate-500">{issuer}</p>
                                     <p className="text-xs text-slate-400">{date}</p>
                                 </div>
@@ -220,23 +220,22 @@ function HomePage() {
             </section>
 
             {/* Projects */}
-            <section id="projects" className="bg-slate-50 py-24">
-                <div className="mx-auto max-w-7xl px-10">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-12">Projects</h2>
-                    <div className="flex flex-col gap-12">
+            <section id="projects" className="bg-slate-50 py-12 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-8 lg:mb-12">Projects</h2>
+                    <div className="flex flex-col gap-10 lg:gap-12">
                         {projects.map(({ title, description, tags }, index) => (
                             <div
                                 key={title}
-                                className={`flex items-center gap-12 ${index % 2 !== 0 ? "flex-row-reverse" : ""}`}
+                                className={`flex flex-col md:flex-row items-center gap-8 lg:gap-12 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
                             >
-                                {/* Placeholder image */}
-                                <div className="w-1/2 flex-shrink-0 h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center">
+                                <div className="w-full md:w-1/2 h-52 lg:h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center flex-shrink-0">
                                     <span className="text-slate-600 text-sm">[ project image ]</span>
                                 </div>
-                                <div className="flex flex-col gap-4 max-w-md">
-                                    <h3 className="text-xl font-semibold text-slate-900">{title}</h3>
+                                <div className="flex flex-col gap-4 w-full md:max-w-md text-center md:text-left">
+                                    <h3 className="text-lg lg:text-xl font-semibold text-slate-900">{title}</h3>
                                     <p className="text-slate-500 leading-relaxed">{description}</p>
-                                    <div className="flex flex-wrap gap-2">
+                                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                                         {tags.map((tag) => (
                                             <span
                                                 key={tag}
@@ -248,13 +247,65 @@ function HomePage() {
                                     </div>
                                     <a
                                         href="#"
-                                        className="inline-flex items-center gap-1.5 text-sm text-blue-600 hover:text-blue-700 font-medium"
+                                        className="inline-flex items-center gap-1.5 text-sm text-blue-600 hover:text-blue-700 font-medium justify-center md:justify-start"
                                     >
                                         Find out more <ExternalLink size={14} />
                                     </a>
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact */}
+            <section id="contact" className="bg-slate-950 py-12 lg:py-24">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+                    <div className="flex flex-col md:flex-row gap-10 lg:gap-16 items-start">
+                        <div className="flex flex-col gap-5 w-full md:max-w-sm">
+                            <h2 className="text-2xl lg:text-3xl font-bold text-white">Get in Touch</h2>
+                            <p className="text-slate-300 leading-relaxed">
+                                Have a question, want to collaborate, or just want to talk DevOps?
+                                Drop me a message and I'll get back to you.
+                            </p>
+                            <div className="flex flex-col gap-2 text-sm text-slate-400 mt-2">
+                                <span>dev.tombriggs@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <form
+                            className="flex-1 flex flex-col gap-4 w-full"
+                            onSubmit={(e) => e.preventDefault()}
+                        >
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <input
+                                    type="text"
+                                    placeholder="Name"
+                                    className="flex-1 bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    className="flex-1 bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                                />
+                            </div>
+                            <input
+                                type="text"
+                                placeholder="Subject"
+                                className="bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                            />
+                            <textarea
+                                rows={5}
+                                placeholder="Your message..."
+                                className="bg-slate-800 border border-slate-700 text-white placeholder-slate-500 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                            />
+                            <button
+                                type="submit"
+                                className="self-start bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors"
+                            >
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>

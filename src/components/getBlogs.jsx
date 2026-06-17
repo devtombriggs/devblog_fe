@@ -8,7 +8,7 @@ function getBlogs() {
     const getPosts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/posts"
+          "/api/posts"
         );
 
         const data = await response.json();
