@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'docker build . -t blog_ui'
-                sh 'docker-compose up -d'
+                sh 'docker compose up -d'
             }
         }
     }
