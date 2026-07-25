@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Hello World') {
             steps {
-                sh 'ls'
+                sh 'pwd'
+                sh 'docker build . -t blog_ui'
+                sh 'docker-compose up -d'
             }
         }
     }
