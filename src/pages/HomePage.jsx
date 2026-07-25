@@ -266,7 +266,7 @@ function HomePage() {
                             <h2 className="text-2xl lg:text-3xl font-bold text-white">Get in Touch</h2>
                             <p className="text-slate-300 leading-relaxed">
                                 Have a question, want to collaborate, or just want to talk DevOps?
-                                Drop me a message and I'll get back to you.
+                                Drop me a message and I'll get back to you!
                             </p>
                             <div className="flex flex-col gap-2 text-sm text-slate-400 mt-2">
                                 <span>dev.tombriggs@gmail.com</span>
