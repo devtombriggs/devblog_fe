@@ -1,0 +1,6 @@
+services:
+  blog_ui:
+    build: .
+    image: blog_ui:latest
+    ports:
+      - "127.0.0.1:8080:80"
