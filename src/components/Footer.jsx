@@ -60,7 +60,7 @@ const Footer = () => {
                     </div>
 
                     <p className="text-xs text-slate-600">
-                        © {new Date().getFullYear()} DevOps with Tom. All rights reserved.
+                        © {new Date().getFullYear()} DevOps with Tom. All rights reserved!
                     </p>
                 </div>
             </div>
